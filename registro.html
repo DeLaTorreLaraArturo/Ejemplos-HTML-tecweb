@@ -7,11 +7,11 @@
     <h1>Register</h1>
     <form method="GET">
 
-        <label for="first-name">First name:</label>
-        <input type="text" name="first-name" id="first-name">
+        <label for="first-name">First name: *</label>
+        <input type="text" name="first-name" id="first-name" required placeholder="your first name">
     
         <label for="last-name">Last name:</label>
-        <input type="text" name="Last-name" id="last-name">
+        <input type="text" name="Last-name" id="last-name" placeholder="your last name">
     
         <div>
             <input type="radio" name="gender" id="male">
@@ -24,10 +24,59 @@
         <div>       
             <label for="email">Email:</label>
             <input type="email" id="email">
-            <label for="pass">Password:</label>
-            <input type="password" name="passwd" id="pass">
+            <label for="pass">Password: *</label>
+            <input type="password" name="passwd" id="pass" required placeholder="At least 4 charters" minlength="8">
         </div>
         <div>
+            <label for="birthday">Birthday</label>
+            <select name="month">
+                <option>Month</option>
+                <option>------</option>
+                <option value="1">Jan</option>
+                <option value="2">Feb</option>
+                <option value="3">Mar</option>
+                <option value="4">Apr</option>
+                <option value="5">May</option>
+                <option value="6">Jun</option>
+                <option value="7">Jul</option>
+                <option value="8">Aug</option>
+                <option value="9">Sept</option>
+                <option value="10">Oct</option>
+                <option value="11">Nov</option>
+                <option value="12">Dec</option>
+            </select>
+            <select name="day">
+                <option>Day</option>
+                <option>----</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            <select name="year">
+                <option>2001</option>
+                <option>1999</option>
+                <option>1998</option>
+                <option>1997</option>
+                <option>1996</option>
+                <option>1995</option>
+                <option>1994</option>
+            </select>
+        </div>
+        <div>
+            <label for="terms-conditions">I agree to the terms and conditions *</label>
+            <input id="terms-conditions" type="checkbox" required>
+            <p>
+                *Required
+            </p>
             <!--Boton para enviar la información-->
             <input type="submit" value="submit" id="send-to-server">
         </div>
